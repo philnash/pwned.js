@@ -1,14 +1,14 @@
 import 'isomorphic-fetch';
-import { hashedPassword, matchHash } from './utils';
-import { API_URL, HASH_PREFIX_LENGTH, DEFAULT_HEADERS } from './constants';
+import { API_URL, DEFAULT_HEADERS, HASH_PREFIX_LENGTH } from './constants';
 import { PwnedError } from './pwned_error';
+import { hashedPassword, matchHash } from './utils';
 
-interface PwnedResult {
+interface IPwnedResult {
   pwned: boolean;
   pwnedCount: number;
 }
 
-const pwned = async (password: string, headerOpts: { [s: string]: string } = {}): Promise<PwnedResult> => {
+const pwned = async (password: string, headerOpts: { [s: string]: string } = {}): Promise<IPwnedResult> => {
   const hash = hashedPassword(password);
   const prefix = hash.substring(0, HASH_PREFIX_LENGTH);
   const suffix = hash.substring(HASH_PREFIX_LENGTH);
