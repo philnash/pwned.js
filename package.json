@@ -1,5 +1,5 @@
 {
-  "name": "pwned",
+  "name": "@philnash/pwned",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@types/fetch-mock": "^7.3.0",
+    "@types/isomorphic-fetch": "0.0.35",
     "isomorphic-fetch": "^2.2.1",
     "webcrypto": "^0.1.1"
   }
