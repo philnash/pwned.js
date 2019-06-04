@@ -30,4 +30,4 @@ const pwned = async (password: string, headerOpts: { [s: string]: string } = {})
   }
 };
 
-module.exports = pwned;
+export default pwned;

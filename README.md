@@ -21,7 +21,7 @@ npm install @philnash/pwned
 ### With promises
 
 ```javascript
-const pwned = require('@philnash/pwned');
+const pwned = require('@philnash/pwned').default;
 
 pwned('password').then(password => {
   if (password.pwned) {
@@ -35,7 +35,7 @@ pwned('password').then(password => {
 ### With async/await
 
 ```javascript
-const pwned = require('./lib/pwned');
+import pwned from '@philnash/pwned';
 
 const testPassword = async attempt => {
   const password = await pwned(attempt);
